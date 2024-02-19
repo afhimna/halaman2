@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFHIMNA</title>
+    <style>
+        body {
+            font-family: "KFGQPC Uthman Taha Naskh Regular", "Times New Roman", Arial, sans-serif;
+            background: #000000;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #333;
+            padding: 20px 0;
+            font-size: 1.5em;
+        }
+
+        h3 {
+            font-family: "KFGQPC Uthman Taha Naskh Regular", "Times New Roman", Arial, sans-serif;
+            color: #ffffff;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        form input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        div {
+            background-color: #444;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #008000; 
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #006400; 
+        }
+
+        .answer-explanation {
+            text-align: left;
+            background-color: #ffd700; 
+            color: #000000; 
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .result-correct {
+            background-color: #008000; 
+        }
+
+        .result-incorrect {
+            background-color: #cc0000; 
+            animation: blink 1s infinite; 
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>بِسْمِ اللهِ الرَّحْمنِ الرَّحِيْمِ</h1>
+
+    <div>
+        <p>السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</p>
+        <p>selamat datang di “AFHIMNA”</p>
+		<p>Jawab pertanyaan dibawah ini dengan benar!</p>
+    </div>
+
+    <!-- Pertanyaan dan jawaban -->
+    <h3>Pertanyaan 1: "زَيْدٌ قَائِمٌ". pada contoh tersebut, lafadz قَائِمٌ, statusnya menjadi apa?</h3>
+    <form name="question1">
+        <input type="radio" name="answer1" value="A"> A. فَاعِل<br>
+        <input type="radio" name="answer1" value="B"> B. مُبْتَدَأ<br>
+        <input type="radio" name="answer1" value="C"> C. خَبَر<br>
+        <input type="radio" name="answer1" value="D"> D. حَال<br>
+    </form>
+    <div id="result1" style="display: none; text-align: center;"></div>
+
+    <h3>Pertanyaan 2: siapa yang merofa'kan lafadz زَيْدٌ, menurut ulama' bashroh?</h3>
+    <form name="question2">
+        <input type="radio" name="answer2" value="A"> A. عَامِل مَعْنَوِيّ تَجَرُّد<br>
+        <input type="radio" name="answer2" value="B"> B. خَبَر<br>
+        <input type="radio" name="answer2" value="C"> C. نِسْبَة<br>
+        <input type="radio" name="answer2" value="D"> D. عَامِل مَعْنَوِيّ ابْتِدَاء<br>
+    </form>
+    <div id="result2" style="display: none; text-align: center;"></div>
+
+    <h3>Pertanyaan 3: siapa yang merofa'kan lafadz زَيْدٌ, menurut ulama' kufah? </h3>
+    <form name="question3">
+        <input type="radio" name="answer3" value="A"> A. عَامِل مَعْنَوِيّ تَجَرُّد<br>
+        <input type="radio" name="answer3" value="B"> B. خَبَر<br>
+        <input type="radio" name="answer3" value="C"> C. نِسْبَة<br>
+        <input type="radio" name="answer3" value="D"> D. عَامِل مَعْنَوِيّ ابْتِدَاء<br>
+    </form>
+    <div id="result3" style="display: none; text-align: center;"></div>
+
+    <h3>Pertanyaan 4: apa shigot dari lafadz قَائِمٌ?</h3>
+    <form name="question4">
+        <input type="radio" name="answer4" value="A"> A. اسْمُ فَاعِل<br>
+        <input type="radio" name="answer4" value="B"> B. اسْم مَفْعُوْل<br>
+        <input type="radio" name="answer4" value="C"> C. مَصْدَر<br>
+        <input type="radio" name="answer4" value="D"> D. اسْم مَكَان<br>
+    </form>
+    <div id="result4" style="display: none;"></div>
+
+    <h3>Pertanyaan 5: apa i'rob dari lafadz قَائِمٌ?</h3>
+    <form name="question5">
+        <input type="radio" name="answer5" value="A"> A. نَصْب<br>
+        <input type="radio" name="answer5" value="B"> B. رَفْع<br>
+        <input type="radio" name="answer5" value="C"> C. جَرّ<br>
+        <input type="radio" name="answer5" value="D"> D. جَزْم<br>
+    </form>
+    <div id="result5" style="display: none;"></div>
+
+    <h3>Pertanyaan 6: apa alamat rofa' dari lafadz قَائِمٌ?</h3>
+    <form name="question6">
+        <input type="radio" name="answer6" value="A"> A. أَلِف<br>
+        <input type="radio" name="answer6" value="B"> B. ضَمَّة<br>
+        <input type="radio" name="answer6" value="C"> C. وَاو<br>
+        <input type="radio" name="answer6" value="D"> D. نُوْن<br>
+    </form>
+    <div id="result6" style="display: none;"></div>
+
+    <h3>Pertanyaan 7: قَامَ termasuk kategori fi'il apa?</h3>
+    <form name="question7">
+        <input type="radio" name="answer7" value="A"> A. مُتَعَدِّي<br>
+        <input type="radio" name="answer7" value="B"> B. وَاسِطَة<br>
+        <input type="radio" name="answer7" value="C"> C. مُلْغاة<br>
+        <input type="radio" name="answer7" value="D"> D. لَازِم<br>
+    </form>
+    <div id="result7" style="display: none;"></div>
+
+    <h3>Pertanyaan 8: قَامَ termasuk kategori fi'il apa? </h3>
+    <form name="question8">
+        <input type="radio" name="answer8" value="A"> A. مُشْتَقّ<br>
+        <input type="radio" name="answer8" value="B"> B. جَامِد<br>
+        <input type="radio" name="answer8" value="C"> C. مُسْتَق<br>
+        <input type="radio" name="answer8" value="D"> D. مُسْتَك<br>
+    </form>
+    <div id="result8" style="display: none;"></div>
+
+    <h3>Pertanyaan 9: قِيَامًا termasuk kategori مَصْدَر?</h3>
+    <form name="question9">
+        <input type="radio" name="answer9" value="A"> A. قِيَاسِيّ<br>
+        <input type="radio" name="answer9" value="B"> B. قَلْبِيّ<br>
+        <input type="radio" name="answer9" value="C"> C. فِعْلْيّ<br>
+        <input type="radio" name="answer9" value="D"> D. سَمَاعِيّ<br>
+    </form>
+    <div id="result9" style="display: none;"></div>
+
+    <h3>Pertanyaan 10: siapa penyusun kitab مَتْن الآجُرُوْمِيَّة?</h3>
+    <form name="question10">
+        <input type="radio" name="answer10" value="A"> A. الشَّيْخ مُحَمَّد بْن عَبْدِ اللّه الْأَنْدَلٌسِيّ<br>
+        <input type="radio" name="answer10" value="B"> B. الشَّيْخ مُحَمَّد بْن عَبْدِ اللّه بْن دَاوُد الصَّنْهَاجِيّ<br>
+        <input type="radio" name="answer10" value="C"> C. الشَّيْخ أَحْمَد زَيْنِيْ دَحْلَان<br>
+        <input type="radio" name="answer10" value="D"> D. الشَّيْخ خَالِدْ الْأَزْهَرِيّ<br>
+    </form>
+    <div id="result10" style="display: none;"></div>
+
+    <script>
+        function updateResults(questionNumber, correctAnswer, additionalInfo) {
+            var selectedAnswer = document.forms["question" + questionNumber].elements["answer" + questionNumber];
+            var resultDiv = document.getElementById("result" + questionNumber);
+
+            resultDiv.innerHTML = selectedAnswer.value === correctAnswer
+                ? "<p class='result-correct'><strong>Jawaban:</strong> Benar!</p>" + "<div class='answer-explanation'>" + additionalInfo + "</div>"
+                : "<p class='result-incorrect'><strong>Jawaban:</strong> Salah.</p>";
+
+            resultDiv.style.display = "block";
+        }
+
+        document.forms["question1"].addEventListener("change", function () {
+            updateResults(1, "C", "<p>karena قَائِمٌ adalah isim yang dibaca rofa' yang disandarkan kepada mubtada'. </p>");
+        });
+
+        document.forms["question2"].addEventListener("change", function () {
+            updateResults(2, "D", "<p>Menurut ulama' bashroh mubtada' dirofa'kan oleh عَامِل مَعْنَوِيّ ابْتِدَاء</p>");
+        });
+
+        document.forms["question3"].addEventListener("change", function () {
+            updateResults(3, "B", "<p>Menurut ulama' kufah mubtada dirofa'kan oleh خَبَر</p>");
+        });
+
+        document.forms["question4"].addEventListener("change", function () {
+            updateResults(4, "A", "قَامَ يَقُوْمُ قِيَامًا وَمَقَامًا فَهُوَ قَائِمٌ وَذاكَ مَقُوْمٌ قُمْ لَا تَقُمْ مَقَامٌ مِقْوَمٌ</p>");
+        });
+
+        document.forms["question5"].addEventListener("change", function () {
+            updateResults(5, "B", "<p>rofa' karena menjadi khobar</p>");
+        });
+
+        document.forms["question6"].addEventListener("change", function () {
+            updateResults(6, "B", "<p>ضَمَّة karena اسْم مُفْرَد.</p>");
+        });
+
+        document.forms["question7"].addEventListener("change", function () {
+            updateResults(7, "D", "<p>لَازِمْ karena tidak bisa menashobkan maf'ul bih</p>");
+        });
+
+        document.forms["question8"].addEventListener("change", function () {
+            updateResults(8, "A", "<p>مُشْتَق karena bisa ditashrif</p>");
+        });
+
+        document.forms["question9"].addEventListener("change", function () {
+            updateResults(9, "D", "<p>َسَمَاعِيّ karena فِعَالًا bukan termasuk wazan mashdar qiyasi dari fi'il tsulatsi.</p>");
+        });
+
+        document.forms["question10"].addEventListener("change", function () {
+            updateResults(10, "B", "<p>Lahir pada tahun 682H dan wafat pada tahun 723H.</p>");
+        });
+    </script>
+
+<div>
+    <p>Kuis ini hanyalah kuis sederhana, setidaknya bisa membantu anda untuk kembali ke dimensi renung priadi dan bisa kembali mengais memori Nahwu yang pernah hinggap di sanubari.</p>
+    <p>Temukan lebih banyak kuis yang bermanfaat untuk meningkatkan wawasan Nahwu Anda, info lebih lanjut hubungi.</p>
+    <a href="https://www.instagram.com/umarhamdan_a/"><img src="https://i.ibb.co/GJQLx7r/instagram-logo.png" alt="Instagram" style="width: 50px; height: 50px; opacity: 0.8;"></a>
+    <a href="https://wa.me/62859106771139"><img src="https://i.ibb.co/fH3g5XW/whatsapp-logo.png" alt="WhatsApp" style="width: 50px; height: 50px; opacity: 0.8;"></a>
+    <a href="https://t.me/AFHIMNA"><img src="https://i.ibb.co/2tMtmy1/telegram-logo.png" alt="Telegram" style="width: 50px; height: 50px;"></a>
+    <p>this website is created by foztoro© .</p>
+</div>
+</body>
+
+</html>
